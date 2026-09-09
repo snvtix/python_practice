@@ -1,7 +1,7 @@
 import pandas as pd
 from collections import Counter
 
-data = pd.read_csv("L25_pandas/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+data = pd.read_csv("L25_pandas/squirrel/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 
 data_dict = Counter(data["Primary Fur Color"])
 
@@ -11,7 +11,7 @@ pd_dict = {
 }
 
 df = pd.DataFrame(pd_dict)
-df.to_csv("L25_pandas/squirrel.csv")
+df.to_csv("L25_pandas/squirrel/squirrel.csv")
 
 print(data_dict)
 
