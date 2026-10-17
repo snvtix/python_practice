@@ -1,11 +1,18 @@
 import turtle
 import pandas as pd
+    
+data = pd.read_csv("L25_pandas/states/50_states.csv")
+states = data["state"].tolist()
+guessed_states = []
 
-def question():
-    global data
-    global states
-    global guessed_states
+screen = turtle.Screen()
+screen.title("U.S. States Game")
 
+image = "L25_pandas/states/blank_states_img.gif"
+turtle.addshape(image)
+turtle.shape(image)
+
+while len(guessed_states) < 50:
     answer_state = screen.textinput(title=f"State guesser {len(guessed_states)}/50", 
                                     prompt="What's another state name?").title()
 
@@ -26,19 +33,5 @@ def question():
         state_data = data[data.state == answer_state]
         t.goto(state_data["x"].item(), state_data["y"].item())
         t.write(state_data.state.item())
-
-data = pd.read_csv("L25_pandas/states/50_states.csv")
-states = data["state"].tolist()
-guessed_states = []
-
-screen = turtle.Screen()
-screen.title("U.S. States Game")
-
-image = "L25_pandas/states/blank_states_img.gif"
-turtle.addshape(image)
-turtle.shape(image)
-
-while len(guessed_states) < 50:
-    question()
 
 screen.exitonclick()
