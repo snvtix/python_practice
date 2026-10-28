@@ -9,3 +9,6 @@ Quick summary:
 - L24 - working witch files
 - L25 - analysis of csv files (using pandas library) and states guessing game (using turtle and pandas library)
 - L26 - lists, dictionaries and data frames comprehension practice with nato alphabet project
+- L27 - kilometeres / miles coverter with tkinter
+- L28 - pomodoro app with tkinter
+- L29 - password manager with tkinter
